@@ -13,6 +13,8 @@ import toggleLight from "../../assets/Images/toggleLight.png";
 import toggleDark from "../../assets/Images/toggleDark.png";
 import downArrowDark from "../../assets/Images/downArrowDark.png";
 import downArrowLight from "../../assets/Images/downArrowLight.png";
+import menuSelectedDark from "../../assets/Images/menuSelectedDark.png";
+import menuSelectedLight from "../../assets/Images/menuSelectedLight.png";
 import { ModeContext } from "../../Contexts/ModeContext";
 
 const Sidebar = () => {
@@ -49,7 +51,7 @@ const Sidebar = () => {
             {menuItems.map((item, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-[10px] cursor-pointer"
+                className="flex items-center gap-[10px] cursor-pointer relative"
                 onClick={() => setActiveMenuItem(item.id)}
               >
                 <img
@@ -73,6 +75,15 @@ const Sidebar = () => {
                 >
                   {item.title}
                 </p>
+                {item.id === activeMenuItem && (
+                  <img
+                    src={
+                      theme === "dark" ? menuSelectedDark : menuSelectedLight
+                    }
+                    alt=""
+                    className="absolute right-[-20px]"
+                  />
+                )}
               </div>
             ))}
           </div>
