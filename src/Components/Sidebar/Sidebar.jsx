@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import avatar from "../../assets/Images/avatar.png";
 import languageLight from "../../assets/Images/languageLight.png";
 import languageDark from "../../assets/Images/languageDark.png";
@@ -17,6 +17,14 @@ import { ModeContext } from "../../Contexts/ModeContext";
 
 const Sidebar = () => {
   const { theme, setTheme } = useContext(ModeContext);
+  const [activeMenuItem, setActiveMenuItem] = useState(1);
+
+  const menuItems = [
+    { id: 1, title: "Menu Item 1" },
+    { id: 2, title: "Menu Item 2" },
+    { id: 3, title: "Menu Item 3" },
+    { id: 4, title: "Menu Item 4" },
+  ];
   return (
     <div className="absolute top-[105px] left-[25px] bg-[#f5faf8] dark:bg-[#0e1726] rounded-[10px] h-[87vh] w-[250px]">
       <div className="px-[20px] flex flex-col justify-between h-full">
@@ -37,7 +45,37 @@ const Sidebar = () => {
             </div>
           </div>
           {/* items div */}
-          <div></div>
+          <div className="pt-[55px] flex flex-col gap-[16px]">
+            {menuItems.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-[10px] cursor-pointer"
+                onClick={() => setActiveMenuItem(item.id)}
+              >
+                <img
+                  src={
+                    item.id === activeMenuItem
+                      ? theme === "dark"
+                        ? menuItemActiveDark
+                        : menuItemActiveLight
+                      : menuItem
+                  }
+                  alt=""
+                />
+                <p
+                  className={`text-[14px] font-[500] ${
+                    item.id === activeMenuItem
+                      ? theme === "dark"
+                        ? "text-white"
+                        : "text-[#0E1726]"
+                      : "text-[#888]"
+                  }`}
+                >
+                  {item.title}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="border-t border-t-[#888] flex flex-col gap-[28px] pt-[32px] pb-[69px]">
           {/* language */}
@@ -52,7 +90,7 @@ const Sidebar = () => {
                 Language
               </p>
             </div>
-            <div className="flex items-center gap-[5px]">
+            <div className="flex items-center gap-[5px] cursor-pointer">
               <p className="text-[12px] font-[400] text-[#333] dark:text-white">
                 English
               </p>
@@ -88,10 +126,10 @@ const Sidebar = () => {
             )}
           </div>
           {/* signout */}
-          <div className="flex gap-[10px] items-center">
+          <div className="flex gap-[10px] items-center cursor-pointer">
             <img src={theme === "dark" ? logOutDark : logOutLight} alt="" />
             <p className="text-[14px] font-[400] text-[#333] dark:text-white">
-              English
+              SignOut
             </p>
           </div>
         </div>
