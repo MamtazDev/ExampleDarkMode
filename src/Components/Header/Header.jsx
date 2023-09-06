@@ -42,13 +42,11 @@ const Header = () => {
 
   const [hoverIndex, setHoverIndex] = useState(null);
 
-  const mouseOver = (e, idx) => {
-    console.log(e.target, idx);
+  const mouseOver = (idx) => {
     setHoverIndex(idx);
   };
 
-  const mouseOut = (e, idx) => {
-    // console.log(e.target, idx);
+  const mouseOut = (idx) => {
     setHoverIndex(null);
   };
   return (
@@ -66,13 +64,13 @@ const Header = () => {
         {navItems.map((item, idx) => (
           <div
             key={idx}
-            onMouseOver={(e) => mouseOver(e, idx)}
-            onMouseLeave={(e) => mouseOut(e, idx)}
+            onMouseOver={() => mouseOver(idx)}
+            onMouseLeave={() => mouseOut(idx)}
             className={`${
               pathname === item.link
-                ? "bg-[#01ab76] dark:bg-[#cdcdcd]"
-                : "bg-[#f3f5f8] dark:bg-[#0e1726] dark:border-[#888]"
-            }  w-full flex justify-center items-center hover:bg-[#01ab76] hover:dark:bg-[#cdcdcd]  rounded-[5px] dark:border-[2px] `}
+                ? "bg-[#01ab76] dark:bg-[#cdcdcd] border-transparent "
+                : "bg-[#f3f5f8] dark:bg-[#0e1726] border border-[#01ab76]  dark:border-[#888]"
+            }  w-full flex justify-center items-center hover:bg-[#01ab76] hover:dark:bg-[#cdcdcd]  rounded-[5px] border-[2px] `}
           >
             <Link
               to={item.link}
