@@ -28,7 +28,7 @@ const Sidebar = () => {
     { id: 4, title: "Menu Item 4" },
   ];
   return (
-    <div className="absolute top-[105px] left-[25px] bg-[#f5faf8] dark:bg-[#0e1726] rounded-[10px] h-[87vh] w-[250px]">
+    <div className="shadow-lg dark:shadow-none absolute top-[105px] left-[25px] bg-[#f5faf8] dark:bg-[#0e1726] rounded-[10px] h-[87vh] w-[250px]">
       <div className="px-[20px] flex flex-col justify-between h-full">
         <div>
           <div className="border-b border-b-[#888] flex items-center gap-[10px] pt-[39px] pb-[24px] px-[16px]">

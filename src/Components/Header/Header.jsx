@@ -39,14 +39,26 @@ const Header = () => {
   ];
 
   const { pathname } = useLocation();
+
+  const [hoverIndex, setHoverIndex] = useState(null);
+
+  const mouseOver = (e, idx) => {
+    console.log(e.target, idx);
+    setHoverIndex(idx);
+  };
+
+  const mouseOut = (e, idx) => {
+    // console.log(e.target, idx);
+    setHoverIndex(null);
+  };
   return (
-    <div className="bg-[#f5faf8] dark:bg-[#0e1726] flex items-center gap-[75px] px-[45px]">
+    <div className="bg-[#f5faf8] dark:bg-[#0e1726] flex items-center  px-[45px] shadow-md dark:shadow-none">
       <div>
         <Link to="/">
           <img
             src={theme === "dark" ? logo : logoLight}
             alt=""
-            className="cursor-pointer"
+            className="cursor-pointer mr-[150px]"
           />
         </Link>
       </div>
@@ -54,11 +66,13 @@ const Header = () => {
         {navItems.map((item, idx) => (
           <div
             key={idx}
+            onMouseOver={(e) => mouseOver(e, idx)}
+            onMouseLeave={(e) => mouseOut(e, idx)}
             className={`${
               pathname === item.link
                 ? "bg-[#01ab76] dark:bg-[#cdcdcd]"
                 : "bg-[#f3f5f8] dark:bg-[#0e1726] dark:border-[#888]"
-            }  w-full flex justify-center items-center  rounded-[5px] dark:border-[2px] `}
+            }  w-full flex justify-center items-center hover:bg-[#01ab76] hover:dark:bg-[#cdcdcd]  rounded-[5px] dark:border-[2px] `}
           >
             <Link
               to={item.link}
@@ -66,16 +80,21 @@ const Header = () => {
                 pathname === item.link
                   ? "text-[#f5faf8] dark:text-[#0e1726]"
                   : "text-[#01ab76] dark:text-[#888888]"
-              }  py-[20px] w-full flex items-center justify-evenly`}
+              }  py-[20px] relative w-full text-center hover:text-[#f5faf8] hover:dark:text-[#0e1726]`}
             >
               <img
+                className="absolute top-[50%] translate-y-[-50%] left-[39px]"
                 src={
                   pathname === item.link
                     ? theme === "dark"
                       ? tabIconDarkActive
                       : tabIconLightActive
                     : theme === "dark"
-                    ? tabIconDark
+                    ? hoverIndex === idx
+                      ? tabIconDarkActive
+                      : tabIconDark
+                    : hoverIndex === idx
+                    ? tabIconLightActive
                     : tabIconLight
                 }
                 alt=""
