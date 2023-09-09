@@ -15,26 +15,26 @@ const WebVitals = () => {
           <h2 className="gmt_heading">GTMetrix Grade</h2>
           <div iv className="gmt_child">
             <div className="B_div">
-              <h1>B</h1>
+              <h1 className="b_text">B</h1>
             </div>
             <div className="B_div">
               <p>
                 <img src={bankcard} alt="" />
               </p>
-              <h1>Performance</h1>
+              <h3>Performance</h3>
             </div>
             <div className="B_div">
               <p>
                 <img src={bankcard} alt="" />
               </p>
-              <h1>Structure</h1>
+              <h3>Structure</h3>
             </div>
           </div>
         </div>
         {/* first div */}
 
         {/* second div */}
-        <div className="col-sm-12 col-lg-4">
+        <div className="col-sm-12 col-lg-4" style={{padding:"0px"}}>
           <h2 className="gmt_heading">Core Web Vitals</h2>
           <div className="gmt_child">
             <div className="B_div">
