@@ -4,6 +4,7 @@ import bankcard from "../../../assets/Images/bank-card-line.png";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import ToolTip from "./ToolTip";
+import Chart from "./Chart";
 
 const WebVitals = () => {
   return (
@@ -59,21 +60,7 @@ const WebVitals = () => {
         {/* second div */}
         <div className="col-sm-12 col-lg-4 progressbar">
           <h2 className="gmt_heading">Lighthouse</h2>
-          <div style={{ width: "200px", color: "#1A7B58", fontSize: "16px" }}>
-            <CircularProgressbar
-              value={80}
-              text={`${80}/100`}
-              styles={{
-                rotation: 0.25,
-                strokeLinecap: "butt",
-                textSize: "16px",
-                pathTransitionDuration: 0.5,
-                textColor: "#f88",
-                trailColor: "#1A7B58",
-                backgroundColor: "#1A7B58",
-              }}
-            />
-          </div>
+          <Chart />
         </div>
       </div>
 
