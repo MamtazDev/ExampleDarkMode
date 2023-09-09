@@ -22,10 +22,11 @@ const Sidebar = () => {
   const [activeMenuItem, setActiveMenuItem] = useState(1);
 
   const menuItems = [
-    { id: 1, title: "Menu Item 1" },
-    { id: 2, title: "Menu Item 2" },
-    { id: 3, title: "Menu Item 3" },
-    { id: 4, title: "Menu Item 4" },
+    { id: 1, title: "Site Speed Audit" },
+    { id: 2, title: "Light SEO Audit" },
+    { id: 3, title: "Basic SEO Audit" },
+    { id: 4, title: "Comprehensive SEO Audit" },
+    { id: 5, title: "Advanced SEO Audit" },
   ];
   return (
     <div className="shadow-lg dark:shadow-none absolute top-[105px] left-[25px] bg-[#f5faf8] dark:bg-[#0e1726] rounded-[10px] h-[87vh] w-[250px]">
@@ -97,12 +98,12 @@ const Sidebar = () => {
                 src={theme === "dark" ? languageDark : languageLight}
                 alt=""
               />
-              <p className="text-[14px] font-[400] text-[#333] dark:text-white">
+              <p className="text-[14px] font-[400] text-[#1A7B58] dark:text-white">
                 Language
               </p>
             </div>
             <div className="flex items-center gap-[5px] cursor-pointer">
-              <p className="text-[12px] font-[400] text-[#333] dark:text-white">
+              <p className="text-[12px] font-[400] text-[#1A7B58] dark:text-white">
                 English
               </p>
               <img
@@ -116,7 +117,7 @@ const Sidebar = () => {
             <div className="flex gap-[10px] items-center">
               {" "}
               <img src={theme === "dark" ? sunDark : sunLight} alt="" />
-              <p className="text-[14px] font-[400] text-[#333] dark:text-white">
+              <p className="text-[14px] font-[400] text-[#1A7B58] dark:text-white">
                 Dark Mode
               </p>
             </div>
@@ -139,7 +140,7 @@ const Sidebar = () => {
           {/* signout */}
           <div className="flex gap-[10px] items-center cursor-pointer">
             <img src={theme === "dark" ? logOutDark : logOutLight} alt="" />
-            <p className="text-[14px] font-[400] text-[#333] dark:text-white">
+            <p className="text-[14px] font-[400] text-[#1A7B58] dark:text-white">
               SignOut
             </p>
           </div>
