@@ -59,7 +59,7 @@ const WebVitals = () => {
         </div>
         {/* second div */}
         <div className="col-sm-12 col-lg-4 progressbar">
-          <h2 className="gmt_heading">Lighthouse</h2>
+          <h2 className="gmt_heading mb-0">Lighthouse</h2>
           <Chart />
         </div>
       </div>

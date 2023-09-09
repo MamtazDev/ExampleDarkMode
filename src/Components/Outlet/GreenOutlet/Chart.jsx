@@ -5,7 +5,7 @@ const Chart = () => {
   const data = [{ name: "Group A", value: 80 }];
   const startAngle = 70;
   return (
-    <PieChart width={200} height={200}>
+    <PieChart width={200} height={200} padding={0}>
       <Pie
         data={data}
         innerRadius={60}

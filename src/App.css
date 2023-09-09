@@ -7,3 +7,11 @@ body {
 button:focus {
   outline: none !important;
 }
+
+tspan {
+  color: var(--colors-neutral-800, #1E293B);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.16px;
+}
