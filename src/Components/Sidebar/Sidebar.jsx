@@ -70,8 +70,8 @@ const Sidebar = () => {
                     item.id === activeMenuItem
                       ? theme === "dark"
                         ? "text-white"
-                        : "text-[#0E1726]"
-                      : "text-[#888]"
+                        : "text-[#333]"
+                      : "text-[#333]"
                   }`}
                 >
                   {item.title}
