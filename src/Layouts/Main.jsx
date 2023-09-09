@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 const Main = () => {
   return (
-    <div className="bg-[#fafafa] dark:bg-[#060818] h-screen relative">
+    <div className="bg-[#1A7B58] dark:bg-[#060818] h-screen relative">
       <Header />
       <div className="flex">
         <div className="w-2/12">
