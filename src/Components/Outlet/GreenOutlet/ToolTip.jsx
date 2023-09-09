@@ -6,12 +6,10 @@ import information from "../.../../../../assets/Images/information-fill.png";
 import AutoComplete from "./AutoComplete";
 const ToolTip = () => {
   return (
-    <div style={{paddingBottom:"111px"}}>
-      <div className="row" style={{ width: "672px", margin: "auto" }}>
+    <div style={{ paddingBottom: "111px" }}>
+      <div className="row" style={{ width: "672px", marginLeft: "auto",marginRight:"auto",marginBottom:"19px" }}>
         <div className="col-lg-6 col-sm-12">
           <button
-            // data-tooltip-target="tooltip-bottom"
-            // data-tooltip-placement="bottom"
             type="button"
             className="tooltip_green mb-2 md:mb-0 text-white  font-medium rounded-lg text-sm px-3 py-2.5 text-center "
           >
@@ -23,12 +21,9 @@ const ToolTip = () => {
               <img src={xcros} alt="" className="cross_design" />
             </span>
           </button>
-        
         </div>
         <div className="col-lg-6 col-sm-12">
           <button
-            // data-tooltip-target="tooltip-bottom"
-            // data-tooltip-placement="bottom"
             type="button"
             className="tooltip_green mb-2 md:mb-0 text-white  font-medium rounded-lg text-sm px-3 py-2.5 text-center "
           >
@@ -40,22 +35,12 @@ const ToolTip = () => {
               <img src={xcros} alt="" className="cross_design" />
             </span>
           </button>
-          {/*     <div
-            id="tooltip-bottom"
-            role="tooltip"
-            className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-          >
-            Tooltip on bottom
-            <div className="tooltip-arrow" data-popper-arrow></div>
-          </div> */}
         </div>
       </div>
       {/* second row design */}
-      <div className="row" style={{ width: "672px", margin: "auto" }}>
+      <div className="row" style={{ width: "672px", marginLeft: "auto",marginRight:"auto",marginBottom:"19px" }}>
         <div className="col-lg-6 col-sm-12">
           <button
-            // data-tooltip-target="tooltip-bottom"
-            // data-tooltip-placement="bottom"
             type="button"
             className="tooltip_yellow mb-2 md:mb-0 text-white  font-medium rounded-lg text-sm px-3 py-2.5 text-center "
           >
@@ -67,19 +52,9 @@ const ToolTip = () => {
               <img src={xcros} alt="" className="cross_design" />
             </span>
           </button>
-          {/*   <div
-            id="tooltip-bottom"
-            role="tooltip"
-            className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-          >
-            Tooltip on bottom
-            <div className="tooltip-arrow" data-popper-arrow></div>
-          </div> */}
         </div>
         <div className="col-lg-6 col-sm-12">
           <button
-            // data-tooltip-target="tooltip-bottom"
-            // data-tooltip-placement="bottom"
             type="button"
             className="tooltip_yellow mb-2 md:mb-0 text-white  font-medium rounded-lg text-sm px-3 py-2.5 text-center "
           >
@@ -91,19 +66,11 @@ const ToolTip = () => {
               <img src={xcros} alt="" className="cross_design" />
             </span>
           </button>
-          {/* <div
-            id="tooltip-bottom"
-            role="tooltip"
-            className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-          >
-            Tooltip on bottom
-            <div className="tooltip-arrow" data-popper-arrow></div>
-          </div> */}
         </div>
       </div>
 
       {/* third row */}
-      <div className="row" style={{ width: "672px", margin: "auto" }}>
+      <div className="row" style={{ width: "672px", marginLeft: "auto",marginRight:"auto",marginBottom:"19px" }}>
         <div className="col-lg-6 col-sm-12">
           <button
             // data-tooltip-target="tooltip-bottom"
@@ -119,14 +86,6 @@ const ToolTip = () => {
               <img src={xcros} alt="" className="cross_design" />
             </span>
           </button>
-          {/*     <div
-            id="tooltip-bottom"
-            role="tooltip"
-            className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-          >
-            Tooltip on bottom
-            <div className="tooltip-arrow" data-popper-arrow></div>
-          </div> */}
         </div>
         <div className="col-lg-6 col-sm-12">
           <button
@@ -158,11 +117,6 @@ const ToolTip = () => {
           </div>
         </div>
       </div>
-
-
-
-
-      <AutoComplete/>
     </div>
   );
 };
