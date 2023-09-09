@@ -59,7 +59,7 @@ const Audit = () => {
 
           <div>
             <div className="save_btn_container">
-              <button className="btn save_btn" type="button">
+              <button className=" save_btn" type="button">
                 Save
               </button>
               <div className="ml_1 save_arrow_btn">

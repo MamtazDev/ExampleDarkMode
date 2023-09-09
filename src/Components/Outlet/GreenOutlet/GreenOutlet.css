@@ -8,15 +8,21 @@
     background: var(--colors-white, #FFF);
 }
 
-.url_input:defaultValue {
-    color: var(--colors-neutral-800, #1E293B);
+input:focus,
+button:focus {
+    --tw-ring-color: transparent !important;
+    --tw-ring-offset-shadow: none !important;
+    --tw-ring-shadow: none !important;
+    border-color: #caf2c2 !important;
+    box-shadow: none !important;
+}
 
-    /* Body/B2 | Regular */
-    font-family: Inter;
-    font-size: 14px !important;
-    font-style: normal;
-    font-weight: 400;
+button:focus-visible {
+    border: none !important;
+}
 
+button:focus {
+    border-color: none !important;
 }
 
 .site_audit_text {
@@ -26,19 +32,15 @@
     font-size: 11px;
     font-style: normal;
     font-weight: 500 !important;
-
-
 }
 
 .first_div {
     border-radius: 10px;
-    /* background: #F5FAF8; */
     border-radius: 10px;
     background: #F5FAF8;
     max-width: 1525px;
     height: 180px;
     padding-left: 25px;
-
 }
 
 .question_page {
@@ -67,6 +69,11 @@
     align-items: center;
 }
 
+.MuiAutocomplete-tagIcon {
+    padding-left: 3px !important;
+    padding-top: 2px;
+}
+
 .star {
     color: var(--colors-negative-600, #DC2626);
     font-family: Inter;
@@ -84,6 +91,8 @@
     font-weight: 500;
     width: 82px;
     height: 44px;
+    border-top-left-radius:8px;
+    border-bottom-left-radius:8px;
     /* margin-right: 66px; */
     /* margin-top: 29px; */
 
@@ -362,9 +371,20 @@
 }
 
 .css-wb57ya-MuiFormControl-root-MuiTextField-root {
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .css-1h51icj-MuiAutocomplete-root .MuiAutocomplete-tag {
     padding: var(--gap-xs, 4px) var(--gap-md, 12px);
 }
+
+.css-1h51icj-MuiAutocomplete-root .MuiAutocomplete-tag {
+    margin-bottom: 3px !important;
+}
+
+/* top bar  */
+/* .css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root {
+
+    padding: 6px !important;
+}
+ */
