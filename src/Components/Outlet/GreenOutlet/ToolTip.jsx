@@ -7,7 +7,15 @@ import AutoComplete from "./AutoComplete";
 const ToolTip = () => {
   return (
     <div style={{ paddingBottom: "111px" }}>
-      <div className="row" style={{ width: "672px", marginLeft: "auto",marginRight:"auto",marginBottom:"19px" }}>
+      <div
+        className="row"
+        style={{
+          width: "672px",
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginBottom: "19px",
+        }}
+      >
         <div className="col-lg-6 col-sm-12">
           <button
             type="button"
@@ -38,7 +46,15 @@ const ToolTip = () => {
         </div>
       </div>
       {/* second row design */}
-      <div className="row" style={{ width: "672px", marginLeft: "auto",marginRight:"auto",marginBottom:"19px" }}>
+      <div
+        className="row"
+        style={{
+          width: "672px",
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginBottom: "19px",
+        }}
+      >
         <div className="col-lg-6 col-sm-12">
           <button
             type="button"
@@ -70,7 +86,15 @@ const ToolTip = () => {
       </div>
 
       {/* third row */}
-      <div className="row" style={{ width: "672px", marginLeft: "auto",marginRight:"auto",marginBottom:"19px" }}>
+      <div
+        className="row"
+        style={{
+          width: "672px",
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginBottom: "19px",
+        }}
+      >
         <div className="col-lg-6 col-sm-12">
           <button
             // data-tooltip-target="tooltip-bottom"
@@ -106,7 +130,7 @@ const ToolTip = () => {
             id="tooltip-bottom"
             role="tooltip"
             style={{ height: "132px", width: "328px" }}
-            className="tooltip_text absolute z-10 invisible inline-block px-3 py-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            className="tooltip_text absolute z-10 invisible inline-block px-3 py-3 text-sm font-medium text-white bg-[#1E293B] rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
           >
             <div>
               <p>This is a tooltip</p>
