@@ -3,7 +3,6 @@ import circelCheckbox from "../../../assets/Images/checkbox-circle-fill.png";
 import alert from "../.../../../../assets/Images/alert-fill.png";
 import xcros from "../.../../../../assets/Images/close-line.png";
 import information from "../.../../../../assets/Images/information-fill.png";
-import AutoComplete from "./AutoComplete";
 const ToolTip = () => {
   return (
     <div style={{ paddingBottom: "111px" }}>

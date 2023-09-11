@@ -1,10 +1,13 @@
 import React from "react";
 import "./GreenOutlet.css";
 import { RxCross2 } from "react-icons/rx";
-import AutoComplete from "./AutoComplete";
-import AutoComplete2 from "./AutoComplete2";
 import dropdown from "../../../assets/Images/arrow-down-s-line.png";
+import InputValue from "./InputValue/InputValue";
+import InputValue2 from "./InputValue/InputValue2";
 const Audit = () => {
+  const initialCityData = ["London", "Dubai", "Frankfurt"];
+  const initialCityData1 = ["Mobile", "Desktop"];
+
   return (
     <div>
       <div className="mt-10 first_div">
@@ -20,7 +23,6 @@ const Audit = () => {
             </p>
           </div>
         </div>
-        {/* url locationmobile or desktop div */}
         <div className="first_section_container">
           <div className="main_container">
             <div className="">
@@ -41,7 +43,7 @@ const Audit = () => {
               <p className="url_text">
                 <span className="star">*</span> Location
               </p>
-              <AutoComplete />
+              <InputValue initialCityData={initialCityData} />
               <small className="question_page">
                 What location do you want to test the site speed from?
               </small>
@@ -50,7 +52,7 @@ const Audit = () => {
               <p className="url_text">
                 <span className=" star">*</span> Mobile or Desktop
               </p>
-              <AutoComplete2 />
+              <InputValue2 initialCityData1={initialCityData1} />
               <small className="question_page">
                 Do you want to test mobile, desktop or both?
               </small>
