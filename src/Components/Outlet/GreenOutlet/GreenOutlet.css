@@ -8,8 +8,7 @@
     background: var(--colors-white, #FFF);
 }
 
-input:focus,
-button:focus {
+input:focus {
     --tw-ring-color: transparent !important;
     --tw-ring-offset-shadow: none !important;
     --tw-ring-shadow: none !important;
@@ -19,10 +18,11 @@ button:focus {
 
 button:focus-visible {
     border: none !important;
+    /* border-color: #1A7B58 !important; */
 }
 
 button:focus {
-    border-color: none !important;
+    border: none !important;
 }
 
 .site_audit_text {
