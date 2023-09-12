@@ -4,14 +4,14 @@ import { RxCross2 } from "react-icons/rx";
 import dropdown from "../../../assets/Images/arrow-down-s-line.png";
 import InputValue from "./InputValue/InputValue";
 import InputValue2 from "./InputValue/InputValue2";
-import "../../../Responsive/Responsive.css"
+import "../../../Responsive/Responsive.css";
 const Audit = () => {
   const initialCityData = ["London", "Dubai", "Frankfurt"];
   const initialCityData1 = ["Mobile", "Desktop"];
 
   return (
-    <div>
-      <div className="mt-10 first_div">
+    <div className="mb-[15px]">
+      <div className="mt-[45px] first_div gap-4 pb-[42px]">
         <div className="text_cross ">
           <div className="site_audit_text flex content-around items-center gap-3">
             <small>Site Audit</small>
@@ -24,7 +24,7 @@ const Audit = () => {
             </p>
           </div>
         </div>
-        <div className="first_section_container">
+        <div className="first_section_container flex-wrap gap-3">
           <div className="main_container ">
             <div className="">
               <p className="url_text">
@@ -60,14 +60,12 @@ const Audit = () => {
             </div>
           </div>
 
-          <div className="">
-            <div className="save_btn_container">
-              <button className="btn save_btn" type="button">
-                Save
-              </button>
-              <div className="ml_1 save_arrow_btn">
-                <img src={dropdown} alt="" />
-              </div>
+          <div className="save_btn_container">
+            <button className="btn save_btn" type="button">
+              Save
+            </button>
+            <div className="ml_1 save_arrow_btn">
+              <img src={dropdown} alt="" />
             </div>
           </div>
         </div>

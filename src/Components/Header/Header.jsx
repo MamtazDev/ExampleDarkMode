@@ -50,7 +50,7 @@ const Header = () => {
     setHoverIndex(null);
   };
   return (
-    <div className="bg-[#f5faf8] dark:bg-[#0e1726] flex items-center  px-[45px] shadow-md dark:shadow-none">
+    <div className="bg-[#f5faf8] dark:bg-[#0e1726] flex items-center  px-[45px] shadow-md dark:shadow-none overflow-x-scroll no-scrollbar">
       <div>
         <Link to="/">
           <img
@@ -71,7 +71,7 @@ const Header = () => {
               pathname === item.link
                 ? "bg-[#01ab76] dark:bg-[#cdcdcd] border-transparent "
                 : "bg-[#f3f5f8] dark:bg-[#0e1726] border border-[#01ab76]  dark:border-[#888]"
-            }  w-full flex justify-center items-center hover:bg-[#01ab76] hover:dark:bg-[#cdcdcd]  rounded-[5px] border-[2px] `}
+            }  min-w-[250px] flex justify-center items-center hover:bg-[#01ab76] hover:dark:bg-[#cdcdcd]  rounded-[5px] border-[2px] `}
           >
             <Link
               to={item.link}

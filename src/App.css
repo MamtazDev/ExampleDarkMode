@@ -16,63 +16,39 @@ tspan {
   letter-spacing: 0.16px;
 }
 
-
-.sidebar_responsive{
-  max-width: 15% !important;
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
 }
 
-.hambarg{
-  display: none;
+.recharts-wrapper {
+  margin: auto !important;
 }
+
 /* header */
-#tools_parent{
- 
+#tools_parent {
+
   max-width: 250px !important;
 }
 
 @media only screen and (max-width: 1024px) {
-  .sidebar_responsive{
-    /* position: absolute;
-    left: -10000px !important; */
-    display: none !important;
-  }
-  .tools_container{
+  .tools_container {
     overflow-x: scroll !important;
   }
-  .hambarg{
-    display: block;
-  }
-  #tools_parent{
+
+
+  #tools_parent {
     width: 250px !important;
   }
-  .tools_container{
+
+  .tools_container {
     overflow-x: scroll !important;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .sidebar_responsive{
-    /* position: absolute;
-    left: -10000px !important; */
-    display: none !important;
-  }
-  .tools_container{
+
+  .tools_container {
     overflow-x: scroll !important;
   }
-  .hambarg{
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .sidebar_responsive{
-    position: absolute;
-    left: -10000px !important;
-  }
-  .hambarg{
-    display: block !important;
-  }
 
 }
-
-

@@ -10,11 +10,14 @@ import ApiIntegration from "../ApiIntegration/ApiIntegration";
 const WebVitals = () => {
   return (
     <div className="section2_main">
-      <div style={{ marginTop: "15px" }} className="row section_2_container">
+      <div
+        style={{ marginBottom: "15px" }}
+        className="row mx-0 gy-4 section_2_container"
+      >
         {/* first div */}
-        <div className="col-sm-12 col-lg-4">
+        <div className="col-12 col-lg-4">
           <h2 className="gmt_heading">GTMetrix Grade</h2>
-          <div iv className="gmt_child">
+          <div iv className="gmt_child flex-wrap xl:flex-nowrap">
             <div className="B_div">
               <h1 className="b_text">B</h1>
             </div>
@@ -35,22 +38,22 @@ const WebVitals = () => {
         {/* first div */}
 
         {/* second div */}
-        <div className="col-sm-12 col-lg-4" style={{padding:"0px"}}>
+        <div className="col-12 col-lg-4" style={{ padding: "0px" }}>
           <h2 className="gmt_heading">Core Web Vitals</h2>
-          <div className="gmt_child">
-            <div className="B_div col-sm-12 col-lg-4">
+          <div className="gmt_child flex-wrap xl:flex-nowrap">
+            <div className="B_div ">
               <p>
                 <img src={bankcard} alt="" />
               </p>
               <h1>Label 1</h1>
             </div>
-            <div className="B_div col-sm-12 col-lg-4">
+            <div className="B_div ">
               <p>
                 <img src={bankcard} alt="" />
               </p>
               <h1>Label 1</h1>
             </div>
-            <div className="B_div col-sm-12 col-lg-4">
+            <div className="B_div ">
               <p>
                 <img src={bankcard} alt="" />
               </p>
@@ -59,8 +62,9 @@ const WebVitals = () => {
           </div>
         </div>
         {/* second div */}
-        <div className="col-sm-12 col-lg-4 progressbar">
-          <h2 className="gmt_heading mb-0">Lighthouse</h2>
+        <div className="col-12 col-lg-4 ">
+          <h2 className="gmt_heading mb-0 text-center">Lighthouse</h2>
+
           <Chart />
         </div>
       </div>

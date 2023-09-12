@@ -9,7 +9,7 @@ const ToolTip = () => {
       <div
         className="row"
         style={{
-          width: "672px",
+          maxWidth: "672px",
           marginLeft: "auto",
           marginRight: "auto",
           marginBottom: "19px",
@@ -43,17 +43,6 @@ const ToolTip = () => {
             </span>
           </button>
         </div>
-      </div>
-      {/* second row design */}
-      <div
-        className="row"
-        style={{
-          width: "672px",
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginBottom: "19px",
-        }}
-      >
         <div className="col-lg-6 col-sm-12">
           <button
             type="button"
@@ -82,18 +71,6 @@ const ToolTip = () => {
             </span>
           </button>
         </div>
-      </div>
-
-      {/* third row */}
-      <div
-        className="row"
-        style={{
-          width: "672px",
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginBottom: "19px",
-        }}
-      >
         <div className="col-lg-6 col-sm-12">
           <button
             // data-tooltip-target="tooltip-bottom"

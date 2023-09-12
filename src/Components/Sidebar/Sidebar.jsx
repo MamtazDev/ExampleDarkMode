@@ -20,7 +20,7 @@ import { ModeContext } from "../../Contexts/ModeContext";
 const Sidebar = () => {
   const { theme, setTheme } = useContext(ModeContext);
   const [activeMenuItem, setActiveMenuItem] = useState(1);
-  const [open, setOpen] = useState(false);
+
   const menuItems = [
     { id: 1, title: "Site Speed Audit" },
     { id: 2, title: "Light SEO Audit" },
@@ -28,127 +28,119 @@ const Sidebar = () => {
     { id: 4, title: "Comprehensive SEO Audit" },
     { id: 5, title: "Advanced SEO Audit" },
   ];
-  const handleSidebar = () => {
-    setOpen(!open);
-  };
+
   return (
-    <div>
-      <div className="sidebar_responsive shadow-lg dark:shadow-none absolute top-[105px] left-[25px] bg-[#f5faf8] dark:bg-[#0e1726] rounded-[10px] h-[87vh] w-[250px]">
-        <div className="px-[20px] flex flex-col justify-between h-full">
-          <div>
-            <div className="border-b border-b-[#888] flex items-center gap-[10px] pt-[39px] pb-[24px] px-[16px]">
-              <div className="w-[42px] h-[42px] rounded-full">
-                <img
-                  src={avatar}
-                  alt=""
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div>
-                <p className="text-[12px] font-[400] text-[#888]">
-                  Good Morning
-                </p>
-                <h6 className="text-[14px] font-[500] text-[#333] dark:text-white">
-                  Kyle Davies
-                </h6>
-              </div>
+    <div className="sidebar_responsive shadow-lg dark:shadow-none  bg-[#f5faf8] dark:bg-[#0e1726] rounded-[10px] h-[87vh] max-w-[250px] ">
+      <div className="px-[20px] flex flex-col justify-between h-full">
+        <div>
+          <div className="border-b border-b-[#888] flex items-center gap-[10px] pt-[39px] pb-[24px] px-[16px]">
+            <div className="w-[42px] h-[42px] rounded-full">
+              <img
+                src={avatar}
+                alt=""
+                className="w-full h-full object-contain"
+              />
             </div>
-            <div className="pt-[55px] flex flex-col gap-[16px]">
-              {menuItems.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-[10px] cursor-pointer relative"
-                  onClick={() => setActiveMenuItem(item.id)}
-                >
-                  <img
-                    src={
-                      item.id === activeMenuItem
-                        ? theme === "dark"
-                          ? menuItemActiveDark
-                          : menuItemActiveLight
-                        : menuItem
-                    }
-                    alt=""
-                  />
-                  <p
-                    className={`text-[14px] font-[500] ${
-                      item.id === activeMenuItem
-                        ? theme === "dark"
-                          ? "text-white"
-                          : "text-[#333]"
-                        : "text-[#333]"
-                    }`}
-                  >
-                    {item.title}
-                  </p>
-                  {item.id === activeMenuItem && (
-                    <img
-                      src={
-                        theme === "dark" ? menuSelectedDark : menuSelectedLight
-                      }
-                      alt=""
-                      className="absolute right-[-20px]"
-                    />
-                  )}
-                </div>
-              ))}
+            <div>
+              <p className="text-[12px] font-[400] text-[#888]">Good Morning</p>
+              <h6 className="text-[14px] font-[500] text-[#333] dark:text-white">
+                Kyle Davies
+              </h6>
             </div>
           </div>
-          <div className="border-t border-t-[#888] flex flex-col gap-[28px] pt-[32px] pb-[69px]">
-            <div className="flex items-center justify-between">
-              <div className="flex gap-[10px] items-center">
+          <div className="pt-[55px] flex flex-col gap-[16px]">
+            {menuItems.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-[10px] cursor-pointer relative"
+                onClick={() => setActiveMenuItem(item.id)}
+              >
                 <img
-                  src={theme === "dark" ? languageDark : languageLight}
+                  src={
+                    item.id === activeMenuItem
+                      ? theme === "dark"
+                        ? menuItemActiveDark
+                        : menuItemActiveLight
+                      : menuItem
+                  }
                   alt=""
                 />
-                <p className="text-[14px] font-[400] text-[#1A7B58] dark:text-white">
-                  Language
+                <p
+                  className={`text-[14px] font-[500] ${
+                    item.id === activeMenuItem
+                      ? theme === "dark"
+                        ? "text-white"
+                        : "text-[#333]"
+                      : "text-[#333]"
+                  }`}
+                >
+                  {item.title}
                 </p>
+                {item.id === activeMenuItem && (
+                  <img
+                    src={
+                      theme === "dark" ? menuSelectedDark : menuSelectedLight
+                    }
+                    alt=""
+                    className="absolute right-[-20px]"
+                  />
+                )}
               </div>
-              <div className="flex items-center gap-[5px] cursor-pointer">
-                <p className="text-[12px] font-[400] text-[#1A7B58] dark:text-white">
-                  English
-                </p>
-                <img
-                  src={theme === "dark" ? downArrowDark : downArrowLight}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="flex gap-[10px] items-center">
-                <img src={theme === "dark" ? sunDark : sunLight} alt="" />
-                <p className="text-[14px] font-[400] text-[#1A7B58] dark:text-white">
-                  Dark Mode
-                </p>
-              </div>
-              {theme === "dark" ? (
-                <img
-                  className="cursor-pointer"
-                  onClick={() => setTheme("light")}
-                  src={toggleDark}
-                  alt=""
-                />
-              ) : (
-                <img
-                  className="cursor-pointer"
-                  onClick={() => setTheme("dark")}
-                  src={toggleLight}
-                  alt=""
-                />
-              )}
-            </div>
-            <div className="flex gap-[10px] items-center cursor-pointer">
-              <img src={theme === "dark" ? logOutDark : logOutLight} alt="" />
+            ))}
+          </div>
+        </div>
+        <div className="border-t border-t-[#888] flex flex-col gap-[28px] pt-[32px] pb-[69px]">
+          <div className="flex items-center justify-between">
+            <div className="flex gap-[10px] items-center">
+              <img
+                src={theme === "dark" ? languageDark : languageLight}
+                alt=""
+              />
               <p className="text-[14px] font-[400] text-[#1A7B58] dark:text-white">
-                SignOut
+                Language
               </p>
             </div>
+            <div className="flex items-center gap-[5px] cursor-pointer">
+              <p className="text-[12px] font-[400] text-[#1A7B58] dark:text-white">
+                English
+              </p>
+              <img
+                src={theme === "dark" ? downArrowDark : downArrowLight}
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="flex items-center justify-between">
+            <div className="flex gap-[10px] items-center">
+              <img src={theme === "dark" ? sunDark : sunLight} alt="" />
+              <p className="text-[14px] font-[400] text-[#1A7B58] dark:text-white">
+                Dark Mode
+              </p>
+            </div>
+            {theme === "dark" ? (
+              <img
+                className="cursor-pointer"
+                onClick={() => setTheme("light")}
+                src={toggleDark}
+                alt=""
+              />
+            ) : (
+              <img
+                className="cursor-pointer"
+                onClick={() => setTheme("dark")}
+                src={toggleLight}
+                alt=""
+              />
+            )}
+          </div>
+          <div className="flex gap-[10px] items-center cursor-pointer">
+            <img src={theme === "dark" ? logOutDark : logOutLight} alt="" />
+            <p className="text-[14px] font-[400] text-[#1A7B58] dark:text-white">
+              SignOut
+            </p>
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 };

@@ -4,7 +4,8 @@ const ApiIntegration = () => {
 
   useEffect(() => {
     const run = async () => {
-      const url = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://developers.google.com";
+      const url =
+        "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://developers.google.com";
       try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -12,10 +13,10 @@ const ApiIntegration = () => {
         }
         const data = await response.json();
         setApiData(data);
-        console.log(data)
+        console.log(data);
       } catch (error) {
         console.error("Error fetching API data:", error);
-        }
+      }
     };
 
     run();
@@ -59,18 +60,36 @@ const ApiIntegration = () => {
   return (
     <div className="px-8 py-5">
       {apiData && showInitialContent(apiData.id)}
-      {apiData && showCruxContent({
-        "First Contentful Paint": apiData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS?.category || "N/A",
-        "First Input Delay": apiData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS?.category || "N/A"
-      })}
-      {apiData && showLighthouseContent({
-        'First Contentful Paint': apiData.lighthouseResult?.audits['first-contentful-paint']?.displayValue || "N/A",
-        'Speed Index': apiData.lighthouseResult?.audits['speed-index']?.displayValue || "N/A",
-        'Time To Interactive': apiData.lighthouseResult?.audits['interactive']?.displayValue || "N/A",
-        'First Meaningful Paint': apiData.lighthouseResult?.audits['first-meaningful-paint']?.displayValue || "N/A",
-        'First CPU Idle': apiData.lighthouseResult?.audits['first-cpu-idle']?.displayValue || "N/A",
-        'Estimated Input Latency': apiData.lighthouseResult?.audits['estimated-input-latency']?.displayValue || "N/A"
-      })}
+      {apiData &&
+        showCruxContent({
+          "First Contentful Paint":
+            apiData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS
+              ?.category || "N/A",
+          "First Input Delay":
+            apiData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS?.category ||
+            "N/A",
+        })}
+      {apiData &&
+        showLighthouseContent({
+          "First Contentful Paint":
+            apiData.lighthouseResult?.audits["first-contentful-paint"]
+              ?.displayValue || "N/A",
+          "Speed Index":
+            apiData.lighthouseResult?.audits["speed-index"]?.displayValue ||
+            "N/A",
+          "Time To Interactive":
+            apiData.lighthouseResult?.audits["interactive"]?.displayValue ||
+            "N/A",
+          "First Meaningful Paint":
+            apiData.lighthouseResult?.audits["first-meaningful-paint"]
+              ?.displayValue || "N/A",
+          "First CPU Idle":
+            apiData.lighthouseResult?.audits["first-cpu-idle"]?.displayValue ||
+            "N/A",
+          "Estimated Input Latency":
+            apiData.lighthouseResult?.audits["estimated-input-latency"]
+              ?.displayValue || "N/A",
+        })}
     </div>
   );
 };
