@@ -1,7 +1,7 @@
 .input_container {
     border: 1px solid red;
     height: 44px;
-    width: 300px;
+    width: 300px !important;
     border-radius: var(--radius-radius-md, 8px);
     border: 1px solid var(--colors-neutral-400, #94A3B8);
     background: var(--colors-white, #FFF);

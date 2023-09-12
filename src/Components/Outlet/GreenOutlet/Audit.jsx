@@ -4,6 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import dropdown from "../../../assets/Images/arrow-down-s-line.png";
 import InputValue from "./InputValue/InputValue";
 import InputValue2 from "./InputValue/InputValue2";
+import "../../../Responsive/Responsive.css"
 const Audit = () => {
   const initialCityData = ["London", "Dubai", "Frankfurt"];
   const initialCityData1 = ["Mobile", "Desktop"];
@@ -24,7 +25,7 @@ const Audit = () => {
           </div>
         </div>
         <div className="first_section_container">
-          <div className="main_container">
+          <div className="main_container ">
             <div className="">
               <p className="url_text">
                 <span className="star">*</span> URL
@@ -39,7 +40,7 @@ const Audit = () => {
                 Which page are you testing?
               </small>
             </div>
-            <div className="">
+            <div>
               <p className="url_text">
                 <span className="star">*</span> Location
               </p>
@@ -59,7 +60,7 @@ const Audit = () => {
             </div>
           </div>
 
-          <div>
+          <div className="">
             <div className="save_btn_container">
               <button className="btn save_btn" type="button">
                 Save

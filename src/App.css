@@ -15,3 +15,64 @@ tspan {
   line-height: 140%;
   letter-spacing: 0.16px;
 }
+
+
+.sidebar_responsive{
+  max-width: 15% !important;
+}
+
+.hambarg{
+  display: none;
+}
+/* header */
+#tools_parent{
+ 
+  max-width: 250px !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sidebar_responsive{
+    /* position: absolute;
+    left: -10000px !important; */
+    display: none !important;
+  }
+  .tools_container{
+    overflow-x: scroll !important;
+  }
+  .hambarg{
+    display: block;
+  }
+  #tools_parent{
+    width: 250px !important;
+  }
+  .tools_container{
+    overflow-x: scroll !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar_responsive{
+    /* position: absolute;
+    left: -10000px !important; */
+    display: none !important;
+  }
+  .tools_container{
+    overflow-x: scroll !important;
+  }
+  .hambarg{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar_responsive{
+    position: absolute;
+    left: -10000px !important;
+  }
+  .hambarg{
+    display: block !important;
+  }
+
+}
+
+

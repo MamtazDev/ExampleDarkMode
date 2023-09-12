@@ -5,6 +5,7 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import ToolTip from "./ToolTip";
 import Chart from "./Chart";
+import ApiIntegration from "../ApiIntegration/ApiIntegration";
 
 const WebVitals = () => {
   return (
@@ -37,19 +38,19 @@ const WebVitals = () => {
         <div className="col-sm-12 col-lg-4" style={{padding:"0px"}}>
           <h2 className="gmt_heading">Core Web Vitals</h2>
           <div className="gmt_child">
-            <div className="B_div">
+            <div className="B_div col-sm-12 col-lg-4">
               <p>
                 <img src={bankcard} alt="" />
               </p>
               <h1>Label 1</h1>
             </div>
-            <div className="B_div">
+            <div className="B_div col-sm-12 col-lg-4">
               <p>
                 <img src={bankcard} alt="" />
               </p>
               <h1>Label 1</h1>
             </div>
-            <div className="B_div">
+            <div className="B_div col-sm-12 col-lg-4">
               <p>
                 <img src={bankcard} alt="" />
               </p>
@@ -65,6 +66,8 @@ const WebVitals = () => {
       </div>
 
       <ToolTip />
+
+      {/* <ApiIntegration/> */}
     </div>
   );
 };

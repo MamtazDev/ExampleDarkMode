@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import "./InputValue.css";
 
 const InputValue = ({initialCityData}) => {
-//   const initialCityData = ["London", "Dubai", "Frankfurt"];
   const [cityData, setCityData] = useState(initialCityData);
-
   const handleDeleteBtn = (cityToDelete) => {
     const updatedCityData = cityData.filter((city) => city !== cityToDelete);
     setCityData(updatedCityData);

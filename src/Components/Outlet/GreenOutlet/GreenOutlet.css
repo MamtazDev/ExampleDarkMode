@@ -1,8 +1,7 @@
 .url_input {
 
-    width: 350px;
+    min-width: 350px;
     padding: var(--gap-md, 12px) var(--gap-sm, 8px);
-
     border-radius: var(--radius-radius-md, 8px) !important;
     border: 1px solid var(--colors-neutral-400, #94A3B8);
     background: var(--colors-white, #FFF);
@@ -18,7 +17,6 @@ input:focus {
 
 button:focus-visible {
     border: none !important;
-    /* border-color: #1A7B58 !important; */
 }
 
 button:focus {
@@ -49,9 +47,7 @@ button:focus {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-
 }
-
 .url_text {
     overflow: hidden;
     color: var(--colors-neutral-600, #475569);
@@ -89,7 +85,7 @@ button:focus {
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    width: 82px;
+    max-width: 82px;
     height: 44px;
     border-top-left-radius:8px;
     border-bottom-left-radius:8px;
@@ -102,7 +98,7 @@ button:focus {
     /* background-color: #1a7b58 !important; */
     color: var(--colors-white, #FFF);
     height: 44px;
-    width: 40px;
+    max-width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +133,7 @@ button:focus {
     display: flex;
     gap: 13px;
     align-items: center;
-
+/* flex-wrap: wrap; */
 }
 
 .gmt_heading {
@@ -180,7 +176,7 @@ button:focus {
     border-radius: var(--radius-radius-md, 8px);
     background: #CAF2C2 !important;
     display: flex;
-    width: 328px;
+    min-width: 328px;
     height: 56px;
     justify-content: space-between;
     align-items: center;
@@ -196,7 +192,7 @@ button:focus {
     border-radius: var(--radius-radius-md, 8px);
     background: #FFF8B8 !important;
     display: flex;
-    width: 328px;
+    min-width: 328px;
     height: 56px;
     justify-content: space-between;
     align-items: center;
@@ -212,7 +208,7 @@ button:focus {
     border-radius: var(--radius-radius-md, 8px);
     background: #FFD6C9 !important;
     display: flex;
-    width: 328px;
+    min-width: 328px;
     height: 56px;
     justify-content: space-between;
     align-items: center;
@@ -266,14 +262,14 @@ button:focus {
 }
 
 .cross_design {
-    width: 24px;
+    max-width: 24px;
     height: 24px;
 }
 
 /* second section */
 .B_div {
     display: flex;
-    width: 151px;
+    max-width: 151px;
     height: 110px;
     padding: var(--gap-xl, 24px) var(--gap-3lg, 46px);
     flex-direction: column;
