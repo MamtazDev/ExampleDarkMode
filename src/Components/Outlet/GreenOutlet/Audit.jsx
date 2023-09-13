@@ -59,13 +59,20 @@ const Audit = () => {
               </small>
             </div>
           </div>
+          <div className="relative parent">
+            <div className="save_btn_container">
+              <button className="btn save_btn" type="button">
+                Save
+              </button>
+              <div className="ml_1 save_arrow_btn">
+                <img src={dropdown} alt="" />
+              </div>
+            </div>
 
-          <div className="save_btn_container">
-            <button className="btn save_btn" type="button">
-              Save
-            </button>
-            <div className="ml_1 save_arrow_btn">
-              <img src={dropdown} alt="" />
+            <div className="absolute result">
+              <button>Download</button>
+              <button>Edit</button>
+              <button>Delete</button>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ const Main = () => {
     setOpen(!open);
   };
   return (
-    <div className="bg-[#1A7B58] dark:bg-[#060818] h-screen relative">
+    <div className="bg-[#1A7B58] dark:bg-[#060818] relative">
       <Header />
       <button
         className="block dark:text-white xl:hidden p-2"
@@ -31,7 +31,7 @@ const Main = () => {
             <Sidebar />
           </div>
         </div>
-        <div className="w-full col-span-5 p-2 xl:p-0">
+        <div className="w-full col-span-5 p-2 lg:p-0">
           <Outlet />
         </div>
       </div>

@@ -50,7 +50,7 @@ const Header = () => {
     setHoverIndex(null);
   };
   return (
-    <div className="bg-[#f5faf8] dark:bg-[#0e1726] flex items-center  px-[45px] shadow-md dark:shadow-none overflow-x-scroll no-scrollbar">
+    <div className="bg-[#f5faf8] dark:bg-[#0e1726] flex items-center px-0  xl:px-[45px] shadow-md dark:shadow-none overflow-x-scroll no-scrollbar">
       <div>
         <Link to="/">
           <img
