@@ -17,6 +17,8 @@ const ToolTip = () => {
       >
         <div className="col-lg-6 col-sm-12">
           <button
+            data-tooltip-target="tooltip-bottom2"
+            data-tooltip-placement="bottom"
             type="button"
             className="tooltip_green mb-2 md:mb-0 text-white  font-medium rounded-lg text-sm px-3 py-2.5 text-center "
           >
@@ -28,9 +30,24 @@ const ToolTip = () => {
               <img src={xcros} alt="" className="cross_design" />
             </span>
           </button>
+          <div
+            id="tooltip-bottom2"
+            role="tooltip"
+            style={{ height: "132px", width: "328px" }}
+            className="tooltip_text absolute z-10 invisible inline-block px-3 py-3 text-sm font-medium text-white bg-[#1E293B] rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          >
+            <div>
+              <p>This is a tooltip</p>
+              <button className="button_green">Button</button>
+            </div>
+
+            <div className="tooltip-arrow " data-popper-arrow></div>
+          </div>
         </div>
         <div className="col-lg-6 col-sm-12">
           <button
+            data-tooltip-target="tooltip-bottom3"
+            data-tooltip-placement="bottom"
             type="button"
             className="tooltip_green mb-2 md:mb-0 text-white  font-medium rounded-lg text-sm px-3 py-2.5 text-center "
           >
@@ -42,9 +59,24 @@ const ToolTip = () => {
               <img src={xcros} alt="" className="cross_design" />
             </span>
           </button>
+          <div
+            id="tooltip-bottom3"
+            role="tooltip"
+            style={{ height: "132px", width: "328px" }}
+            className="tooltip_text absolute z-10 invisible inline-block px-3 py-3 text-sm font-medium text-white bg-[#1E293B] rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          >
+            <div>
+              <p>This is a tooltip</p>
+              <button className="button_green">Button</button>
+            </div>
+
+            <div className="tooltip-arrow " data-popper-arrow></div>
+          </div>
         </div>
         <div className="col-lg-6 col-sm-12">
           <button
+            data-tooltip-target="tooltip-bottom4"
+            data-tooltip-placement="bottom"
             type="button"
             className="tooltip_yellow mb-2 md:mb-0 text-white  font-medium rounded-lg text-sm px-3 py-2.5 text-center "
           >
@@ -56,9 +88,24 @@ const ToolTip = () => {
               <img src={xcros} alt="" className="cross_design" />
             </span>
           </button>
+          <div
+            id="tooltip-bottom4"
+            role="tooltip"
+            style={{ height: "132px", width: "328px" }}
+            className="tooltip_text absolute z-10 invisible inline-block px-3 py-3 text-sm font-medium text-white bg-[#1E293B] rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          >
+            <div>
+              <p>This is a tooltip</p>
+              <button className="button_green">Button</button>
+            </div>
+
+            <div className="tooltip-arrow " data-popper-arrow></div>
+          </div>
         </div>
         <div className="col-lg-6 col-sm-12">
           <button
+            data-tooltip-target="tooltip-bottom5"
+            data-tooltip-placement="bottom"
             type="button"
             className="tooltip_yellow mb-2 md:mb-0 text-white  font-medium rounded-lg text-sm px-3 py-2.5 text-center "
           >
@@ -70,11 +117,24 @@ const ToolTip = () => {
               <img src={xcros} alt="" className="cross_design" />
             </span>
           </button>
+          <div
+            id="tooltip-bottom5"
+            role="tooltip"
+            style={{ height: "132px", width: "328px" }}
+            className="tooltip_text absolute z-10 invisible inline-block px-3 py-3 text-sm font-medium text-white bg-[#1E293B] rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          >
+            <div>
+              <p>This is a tooltip</p>
+              <button className="button_green">Button</button>
+            </div>
+
+            <div className="tooltip-arrow " data-popper-arrow></div>
+          </div>
         </div>
         <div className="col-lg-6 col-sm-12">
           <button
-            // data-tooltip-target="tooltip-bottom"
-            // data-tooltip-placement="bottom"
+            data-tooltip-target="tooltip-bottom6"
+            data-tooltip-placement="bottom"
             type="button"
             className="tooltip_green mb-2 md:mb-0 text-white  font-medium rounded-lg text-sm px-3 py-2.5 text-center "
           >
@@ -86,6 +146,19 @@ const ToolTip = () => {
               <img src={xcros} alt="" className="cross_design" />
             </span>
           </button>
+          <div
+            id="tooltip-bottom6"
+            role="tooltip"
+            style={{ height: "132px", width: "328px" }}
+            className="tooltip_text absolute z-10 invisible inline-block px-3 py-3 text-sm font-medium text-white bg-[#1E293B] rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          >
+            <div>
+              <p>This is a tooltip</p>
+              <button className="button_green">Button</button>
+            </div>
+
+            <div className="tooltip-arrow " data-popper-arrow></div>
+          </div>
         </div>
         <div className="col-lg-6 col-sm-12">
           <button
