@@ -1,17 +1,26 @@
 import React, { useState } from "react";
 import "./InputValue.css";
 
-const InputValue = ({initialCityData}) => {
-  const [cityData, setCityData] = useState(initialCityData);
+const InputValue = ({ initialCityData }) => {
+  const [selectedCities, setSelectedCities] = useState([]);
+
+  const handleCityClick = (city) => {
+    if (!selectedCities.includes(city)) {
+      setSelectedCities([...selectedCities, city]);
+    }
+  };
+
   const handleDeleteBtn = (cityToDelete) => {
-    const updatedCityData = cityData.filter((city) => city !== cityToDelete);
-    setCityData(updatedCityData);
+    const updatedSelectedCities = selectedCities.filter(
+      (city) => city !== cityToDelete
+    );
+    setSelectedCities(updatedSelectedCities);
   };
 
   return (
     <>
       <div className="input_container">
-        {cityData.map((data) => (
+        {selectedCities.map((data) => (
           <div className="inputvalue_design" key={data}>
             <span>{data}</span>
             <button className="" onClick={() => handleDeleteBtn(data)}>
@@ -32,6 +41,17 @@ const InputValue = ({initialCityData}) => {
             </button>
           </div>
         ))}
+        <div className="options bg-white p-3 rounded shadow">
+          {initialCityData.map((data, index) => (
+            <p
+              key={index}
+              className="mb-2"
+              onClick={() => handleCityClick(data)}
+            >
+              {data}
+            </p>
+          ))}
+        </div>
       </div>
     </>
   );

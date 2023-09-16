@@ -10,7 +10,29 @@
     justify-content: center;
     align-items: center;
     gap: var(--gap-xs, 4px);
+    position: relative;
 }
+
+.options {
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in;
+}
+
+.input_container:hover .options,
+.input_container1:hover .options {
+    opacity: 1;
+    visibility: visible;
+}
+
+.options p {
+    cursor: pointer;
+}
+
 .input_container1 {
     border: 1px solid red;
     height: 44px;
@@ -23,6 +45,7 @@
     justify-content: start;
     align-items: center;
     gap: var(--gap-xs, 4px);
+    position: relative;
 }
 
 .inputvalue_design {
@@ -36,6 +59,7 @@
     width: 88px;
     height: 24px;
 }
+
 .inputvalue_design1 {
     border-radius: var(--radius-radius-sm, 4px);
     background: var(--colors-neutral-200, #E2E8F0);
